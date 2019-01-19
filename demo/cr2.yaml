@@ -1,0 +1,6 @@
+apiVersion: stable.example.com/v2
+kind: foo
+metadata:
+  name: foo-instance-2
+  namespace: default
+host: localhost:8080

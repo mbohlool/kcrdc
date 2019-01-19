@@ -1,0 +1,39 @@
+apiVersion: apiextensions.k8s.io/v1beta1
+kind: CustomResourceDefinition
+metadata:
+  name: foos.stable.example.com
+spec:
+  group: stable.example.com
+  names:
+    kind: foo
+    listKind: fooList
+    plural: foos
+    singular: foo
+  scope: Namespaced
+  versions:
+  - name: v1
+    schema:
+      openAPIV3Schema:
+        properties:
+          server:
+            description: +conversion:stable.example.com/v2,rename,host
+            type: string
+    served: true
+    storage: true
+  - name: v2
+    schema:
+      openAPIV3Schema:
+        properties:
+          host:
+            description: +conversion:stable.example.com/v1,rename,server
+            type: string
+    served: true
+    storage: false
+  conversion:
+    strategy: Webhook
+    webhookClientConfig:
+      service:
+        name: kcrdc-webhook-service
+        namespace: default
+        path: /crdconvert
+      caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUMyRENDQWNDZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFkTVJzd0dRWURWUVFERXhKbE1tVXQKYzJWeWRtVnlMV05sY25RdFkyRXdIaGNOTVRneE1qRXdNVGswTkRJd1doY05Namd4TWpBM01UazBOREl3V2pBZApNUnN3R1FZRFZRUURFeEpsTW1VdGMyVnlkbVZ5TFdObGNuUXRZMkV3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBCkE0SUJEd0F3Z2dFS0FvSUJBUURJMkx5MFRNaENQRlpOVEMvM0dLSGVKVjNPQWZsa0pKRjVkYkEyNDVzM0k0Sy8KbjZwTHUxeWg0SkhIQUdSL0pQUUNVTTVSZ1dPRTZqODh0M0lUOUtTNkYvU0NyTnorcWtaUDlCRXZPZnlMeWdrRQozV0czREU0bytVN0Rkck91bzdWYkgvTlp6d1RsVnAxajdxOEplZnM2aTZ1TlV0TVZwZ042VFhSK3IraW5rOWpmClBackVyRzY0UmN3aE1zQTcrbjRvUFUwcXViYkp3RGtZUW5ud1Vnak9DYm1vUC9QTjVIV3J5V2FDYWlZQzZoclUKZ2QvTEduWXdZZ2w1R3h4UEZibzZmTS9qckJIVGRPak9lWE1kV3Fsa2J4TTNQRmtDMzBhZGNSekJLc3JidjFtdgpERTNiTklFRzNBUTh3UytZczM0bnNkNFI1azZFTGlIMWk5OTlOQWREQWdNQkFBR2pJekFoTUE0R0ExVWREd0VCCi93UUVBd0lDcERBUEJnTlZIUk1CQWY4RUJUQURBUUgvTUEwR0NTcUdTSWIzRFFFQkN3VUFBNElCQVFDa3lwMjgKRUJqMld0RTJjb29tbUZCblhGbEdRU1oxdVIxYTI3YUJRMG9KazhSOXBrdElGNVRaK3NoRjF5WUI4UzNyaDNFQwpCcW5vSzZGTUE4eUJjZTQrRlIwRGJrSmY0elkxemk4NXBTVERzeUpRZ3hzaEZSQUZGZmZZd29CUlpsTzBnSXBLClJ1OGVTeWh1RUhId1FIZHR0SkpIdHFGZUtHL0tLWnFUZnBqWS8zZ3VTOXNnT2V0WWdydWdNNlQvRlpBcGFIajkKQWw2anJqdGUzMTlOT3dyUThlMDJsdGtQOFEwdVhWZEIrcDJFb2NCbVBiSk5FM2U1ZFlLZHV6VkFOc0RaNUtScQpNdVRpclpDQ1A3SFBQVTd3R01LZndWSFlzeldUUG5meGJQMTUxMzVRV041YU5rSG5sNjQwTkk5T2NjckRYZDhYCm1MOUFGNTg2Y0hONUV5Sy8KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=

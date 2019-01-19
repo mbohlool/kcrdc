@@ -1,0 +1,67 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: kcrdc-webhook-secret
+  namespace: default
+data:
+  tls.crt: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUM4akNDQWRxZ0F3SUJBZ0lJTkNZRmtGR1FmMDh3RFFZSktvWklodmNOQVFFTEJRQXdIVEViTUJrR0ExVUUKQXhNU1pUSmxMWE5sY25abGNpMWpaWEowTFdOaE1CNFhEVEU0TVRJeE1ERTVORFF5TUZvWERURTVNVEl4TURFNQpORFF5TUZvd0xERXFNQ2dHQTFVRUF4TWhhMk55WkdNdGQyVmlhRzl2YXkxelpYSjJhV05sTG1SbFptRjFiSFF1CmMzWmpNSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXdDZEFydzNxZnE3MTVEbE8KdTFMZlhVQlByRFBzcTFRcThCSys0Ym1HcTNBT29uKzUyRGNIUDJLVHZpdDU5UzhEKzRrcVJvVEtUaEZ6aUZLQgpTM0pCV0NUd1Q1Q1dvRXlmbzZzSzdrcSttWU1SaWxoSFBNWjVIelNFR0wrZisxUzI3RVZHSXB2cytacXgzNCtuClBVeDBFL3JMeUxxN2VlV3dvZG5DZlVWRFlveVRuKzdPMC9jY3ZwaVVYYXZFL1RlS1QyTU9yZ3BBcjdib1FtQk8Kd2NpVUxzT3Q5dWhHdGc4M2d1L2FWNnRqRFFiQXRvM2FGbnlTT1BrVFkwUUxSd3N1b3pIenZYNjRUcUFJVDEzKwpRa1A5UkdMSjRJQnIxbDVvcFdxck5SbWdBZEZxcnFpSzl0dHNxdnNBQ0NWbDBpR3dkZHhrVFA4WFNLTTFEUVJZCkVqL0Vid0lEQVFBQm95Y3dKVEFPQmdOVkhROEJBZjhFQkFNQ0JhQXdFd1lEVlIwbEJBd3dDZ1lJS3dZQkJRVUgKQXdFd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFFZmlYT2RXODJPaDJQRFlFTFhHK3RpRnFFT0lKdmdRdkg0Ygp6QU9EcGUzK3hLZ0JwcUVyS016TDJWZDd1RHpOZnhTazladTBNRVp0NWtONUtXTVE1ajBvTGFRaXpPL0EvUWdJCmY0NTFqTS9OeXlkZUF6N2VJcXpQaHo1REQyc3g4ZVBLdnZTb1JSK1BnMmNiYVc5Z3RRSm5ZUlMxcXNZakFJZmsKUkdocExZblN1Y0hBWjZHZTVDOUg2Z1RWY0FCejROWmVLOVljZXFsSkpjMmw3bzdBblFsL05aSXAwUVRTWG82aAptYzhkcU51TFhPeXdlVjFqSmo1bWlvTWM5R29wZnpOQ0kzSExhTEN1dEZUNXgwNUZHRWNiWDNhdVdnT3FzNmZnCm42SFMvaUhjTC9zeUkvNllTRHE3S1ZVNzJQOXRPN2pYaDFKN3Qrbnl2YTV2THQwcnh2MD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQo=
+  tls.key: LS0tLS1CRUdJTiBSU0EgUFJJVkFURSBLRVktLS0tLQpNSUlFcEFJQkFBS0NBUUVBd0NkQXJ3M3FmcTcxNURsT3UxTGZYVUJQckRQc3ExUXE4QksrNGJtR3EzQU9vbis1CjJEY0hQMktUdml0NTlTOEQrNGtxUm9US1RoRnppRktCUzNKQldDVHdUNUNXb0V5Zm82c0s3a3ErbVlNUmlsaEgKUE1aNUh6U0VHTCtmKzFTMjdFVkdJcHZzK1pxeDM0K25QVXgwRS9yTHlMcTdlZVd3b2RuQ2ZVVkRZb3lUbis3TwowL2NjdnBpVVhhdkUvVGVLVDJNT3JncEFyN2JvUW1CT3djaVVMc090OXVoR3RnODNndS9hVjZ0akRRYkF0bzNhCkZueVNPUGtUWTBRTFJ3c3Vvekh6dlg2NFRxQUlUMTMrUWtQOVJHTEo0SUJyMWw1b3BXcXJOUm1nQWRGcXJxaUsKOXR0c3F2c0FDQ1ZsMGlHd2RkeGtUUDhYU0tNMURRUllFai9FYndJREFRQUJBb0lCQUVSbk5NMmNaSmZJYk54YgowajA1R1M2M0VDVzdMa3NuWVVtcFFxNVVQeTZVYTRGSmVyMFBpZEwwb3FlV0RvcEx2RjAwelFuaGg2c1c1MHZtCkl3VGFuWXhsU2U3cEI5WDBzUGV3a2VtV1RoZVQ0eENlc0cxZ01nbjd4ZktSZE1BaHZpU0ozSmZCYmpERTh3RWsKd0dJLzd5cVZveW5IMzZsYkxPL1E5ejFsQk1IMXJ6MWZEeXVLRmNBaEI0dkxYaC9ZWHAzdFYxVEFzQkppNGJtRwpGQitndnNvNkQveVREMHowdFNkOGRDazg1Yi83ZDhtUXhqM1B3N2RPbDNBc1JQcDJDTE9tVDlSbWMxdTlYb0c2CldEb3MvVVJPVkMvQVk1ano3WEIyREtNYlNxSmhPamVOWXZBdnVraWRuNUYvSVMwam5ZY3lJbDFCbFpzbW5BVGkKSHlXQjRCRUNnWUVBMlFkSkcwWHVXcXhIeE84YjRTaHdqRHovVXhBVzdaWDZDUUJaNDNHUVJKQld4Vk15RThYUApTdzVRM0xuaHhmeGk3cFJFa0ZLc09MZkh2c2lGRHl1TUZoM3hUYUJHVjhTem9kNnArdVdibTU0N3VBMGgxbzNzCjRZV1RpM3pyVWtESGUrSlU4Rndwbm9FOXRZU3R5NGkvUkVYZ3lpamt6KzNSTnY3UXY1Mm5ET01DZ1lFQTRxaDMKa0tIV2NaZmUwNHgyNVBXRDY2SktOOE95aCs5SXBSaTVrWFZ1U3ljMGw4NHdDMlJCa1lKZEVaelBjTGwxQXpjOQpFUHZ6bnp5OVliS2wvMlFycFBUV04yN0V1WENjbWhFdlZBSDhTWDZGeUhzMHd0ODlWZ0ZHY2FHVHlPc25tT1NhCmF4THQ2UVZyZVhHWWNzMkkxN3hnQW9YWnhSNkNwUkh1U2kyY3JBVUNnWUJ0K0RzYkRyeFFSYXU0SmxEQ0xuT1oKRys5a2IycXV5S2dCbDZQMGs3NitmMFQ0aDhlQUxXTjBiTFNjbzdPN1ZyL3FsRWFKdXRwNWd1WTd6ZTllV0hxTApXbkRESE11SC9hdm9BYU92OWxoNjZocm9qLzd0Y016dkdYaEIzZkovbzBOeGlxWHZoVU94aFZ0M2R0dDVucmtNCkp6eFlNNUI5cTh1dlNqOE1XUjRrY1FLQmdRQ25iTDMxTGphVGJoV0F1cTlRYlRMbktkZ2MzUWZSZGFWNW5vdmsKc0pPcUcrbXpnUERvV1VROTBjZ2hyRzFtM1BkY1NyOW0vbFYwK0k4RHpjemttLy9KTjduTTlKdUlSM0RHTlk5NgpSSVV4WEs1QjZ4Q01LZzdLcXVKNEtWeGErNmtpUFNyN2tONEFWS3FRNktJdG16bEw4ckFRN1FKeG94bnFDUmExCjRIOXNhUUtCZ1FDV3lFRXcrNEJrNDg3VmlzTmRkUUo2NFZxRWwrcEQ1bUFlZjJpQVQ1VmVoUWM4OTI5ZTVkSncKZGJiOEkvekpVY3JSTlFSTG45Qjg2Y2dDTm9kTHh6K2JQMnAvcnhnZ3g5ZFVUVk91V3Q4bWkrdnV1YUU4TC9ESQp1SzFWT0ZUWVVNU21RZlJ4WWNYM1Q1NWJnRTE2L1JQeTN2QVJKcE55RTRrUnlPTExvdFB5aEE9PQotLS0tLUVORCBSU0EgUFJJVkFURSBLRVktLS0tLQo=
+type: Opaque
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: kcrdc-webhook-app
+    kcrdc-webhook: 'true'
+  name: kcrdc-webhook-deployment
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kcrdc-webhook-app
+      kcrdc-webhook: 'true'
+  template:
+    metadata:
+      labels:
+        app: kcrdc-webhook-app
+        kcrdc-webhook: 'true'
+    spec:
+      containers:
+      - args:
+        - --tls-cert-file=/webhook.local.config/certificates/tls.crt
+        - --tls-private-key-file=/webhook.local.config/certificates/tls.key
+        - --alsologtostderr
+        - -v=3
+        - 2>&1
+        image: gcr.io/mehdy-k8s/kcrdc-amd64:v15
+        imagePullPolicy: IfNotPresent
+        name: kcrdc-webhook-container
+        ports:
+        - containerPort: 443
+        volumeMounts:
+        - mountPath: /webhook.local.config/certificates
+          name: kcrdc-webhook-certs
+          readOnly: true
+      volumes:
+      - name: kcrdc-webhook-certs
+        secret:
+          defaultMode: 420
+          secretName: kcrdc-webhook-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    mylabel: kcrdc-webhook
+  name: kcrdc-webhook-service
+  namespace: default
+spec:
+  ports:
+  - port: 443
+    protocol: TCP
+    targetPort: 443
+  selector:
+    kcrdc-webhook: 'true'
+  type: ClusterIP
